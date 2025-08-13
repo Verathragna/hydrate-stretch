@@ -32,7 +32,7 @@ cd ../desktop
 npm install
 npm run build
 ```
-This produces a Windows **.exe** (NSIS) installer in `desktop/dist` or `desktop/release`.
+This produces a Windows **.exe** (NSIS) installer in `desktop/release`.
 
 ## Notes
 - App ID is `com.hydrate.stretch` (set via `app.setAppUserModelId` and electron-builder `appId`) so Windows toasts show in Action Center.
