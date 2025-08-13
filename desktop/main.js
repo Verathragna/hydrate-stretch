@@ -179,7 +179,9 @@ function allowedNow() {
   const [eh, em] = (prefs.workEnd || '17:00').split(':').map(Number);
   const start = new Date(now); start.setHours(sh, sm || 0, 0, 0);
   const end   = new Date(now); end.setHours(eh, em || 0, 0, 0);
-  return now >= start && now <= end;
+
+  if (start <= end) return now >= start && now <= end;
+  return now >= start || now <= end;
 }
 
 function tryFire(kind, now, force = false) {
