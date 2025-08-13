@@ -94,7 +94,9 @@ X-GNOME-Autostart-enabled=true
 `
         );
       } else if (fs.existsSync(desktopFile)) fs.unlinkSync(desktopFile);
-    } catch {}
+    } catch (err) {
+      // ignore errors writing autostart file
+    }
   }
   return { ok: true };
 });

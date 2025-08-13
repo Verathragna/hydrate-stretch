@@ -7,13 +7,14 @@
   "type": "module",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
-  },
-  "dependencies": {
-    "electron": "^31.0.0"
+    "build": "electron-builder",
+    "test": "node --test",
+    "lint": "eslint ."
   },
   "devDependencies": {
-    "electron-builder": "^24.13.3"
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.57.0"
   },
   "build": {
     "appId": "com.hydrate.stretch",
@@ -21,6 +22,7 @@
       "**/*"
     ],
     "directories": {
+      "output": "release",
       "buildResources": "build"
     },
     "win": {
