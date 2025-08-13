@@ -1,7 +1,6 @@
 # .gitignore (project root)
 # Node/Vite/Electron
 node_modules/
-dist/
 out/
 .DS_Store
 Thumbs.db
@@ -17,7 +16,6 @@ pnpm-debug.log*
 .idea/
 
 # Build artifacts
-desktop/dist/
 desktop/out/
 client/dist/
 
